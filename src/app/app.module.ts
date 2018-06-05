@@ -6,7 +6,7 @@ import {HttpModule} from '@angular/http'
 
 import { AppComponent } from './app.component';
 import { JoinComponent } from './join/join.component';
-import { JoinService } from './services/join.service'
+import { JoinService } from './join/services/join.service'
 
 @NgModule({
   declarations: [
@@ -19,7 +19,9 @@ import { JoinService } from './services/join.service'
     HttpClientModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    JoinService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

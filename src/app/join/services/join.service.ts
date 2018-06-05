@@ -3,15 +3,18 @@ import {HttpClientModule,HttpHeaders, HttpClient} from '@angular/common/http';
 import {User} from '../models/User';
 import 'rxjs/add/operator/toPromise';
 
+// const httpOptions = {
+//   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+// };
 @Injectable()
 export class JoinService {
 
 
     constructor(private http: HttpClient) { }
-    private customersUrl = 'http://localhost:8080/';
+    private joinUrl = 'http://localhost:8080/toma/join/';
 
-    AddUser(user : User) {
-      // return this.http.post<User>(this.customersUrl+'toma/join',user);
+    addUser(user : User) {
+    return this.http.post(this.joinUrl,user);
     }
 
 }
