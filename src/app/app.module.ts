@@ -6,12 +6,15 @@ import {HttpModule} from '@angular/http'
 
 import { AppComponent } from './app.component';
 import { JoinComponent } from './join/join.component';
-import { JoinService } from './join/services/join.service'
+import { JoinService } from './join/services/join.service';
+import { LoginService } from './login/services/login.service';
+import { LoginComponent } from './login/login.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    JoinComponent
+    JoinComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,8 @@ import { JoinService } from './join/services/join.service'
     HttpModule
   ],
   providers: [
-    JoinService
+    JoinService,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })
